@@ -8,7 +8,7 @@ const cli = (cords,cb) =>{
             return cb(error,undefined)
         }
         // cb(undefined,response.body.timezone);
-        cb(undefined,"Temperature : "+response.body.currently.temperature+" Chances of raining: "+response.body.currently.precipProbability+"%")
+        cb(undefined,"Temperature : "+response.body.currently.temperature+"°F Chances of raining: "+response.body.currently.precipProbability+"%")
     })
 }
 
