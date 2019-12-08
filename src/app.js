@@ -5,7 +5,7 @@ const cli=require("./utils/climate")
 const geocode=require("./utils/location")
 
 const publicdir=path.join(__dirname,"../public")
-
+port=process.env.PORT
 const app=express()
 app.set("view engine","hbs")
 app.set("views",publicdir)
@@ -50,4 +50,4 @@ app.get('*',(req,res)=>{
   })
 })
 
-app.listen(3000)
+app.listen(port||3000)

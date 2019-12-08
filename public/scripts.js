@@ -11,7 +11,7 @@ if(wform){
         const add=loc.value
         msg1.textContent="Loading..."
         msg2.textContent=""
-        fetch('http://localhost:3000/weather?address='+add).then((response) => {
+        fetch('/weather?address='+add).then((response) => {
         response.json().then(
         (data) => {
         if (data.error) {
